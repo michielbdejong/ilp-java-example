@@ -14,5 +14,5 @@ java Connector
 
 Terminal window 3 (run sender):
 ```sh
-curl  -H"ILP-Condition: c" -H"ILP-Destination: d" -H"ILP-Expiry: e" -H"ILP-Amount: 10" http://localhost:8080/asdf
+curl -H"ILP-Condition: c" -H"ILP-Destination: d" -H"ILP-Expiry: e" -H"ILP-Amount: 10" http://localhost:8080/asdf
 ```
