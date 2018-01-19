@@ -3,8 +3,8 @@ import java.util.Hashtable;
 
 class ConnectorInstance extends IlpServer{
   IlpClient ilpClient;
-  ConnectorInstance() throws IOException{
-    this.ilpClient = new IlpClient("localhost", 8090);
+  ConnectorInstance(String onwardHost, Integer onwardPort) throws IOException{
+    this.ilpClient = new IlpClient(onwardHost, onwardPort);
   }
  
   @Override 
@@ -16,9 +16,3 @@ class ConnectorInstance extends IlpServer{
   }
 }
 
-public class Connector{
-  public static void main(String[] args) throws IOException{
-    ConnectorInstance ci = new ConnectorInstance();
-    ci.run(8080);
-  }
-}

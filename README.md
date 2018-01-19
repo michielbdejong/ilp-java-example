@@ -7,12 +7,17 @@ javac *.java
 java Receiver
 ```
 
-Terminal window 2 (run connector):
+Terminal window 2 (run second connector):
 ```sh
-java Connector
+java Connector2
 ```
 
-Terminal window 3 (run sender):
+Terminal window 3 (run first connector):
 ```sh
-curl -H"ILP-Condition: c" -H"ILP-Destination: d" -H"ILP-Expiry: e" -H"ILP-Amount: 10" http://localhost:8080/asdf
+java Connector1
+```
+
+Terminal window 4 (run sender):
+```sh
+curl -H"ILP-Condition: c" -H"ILP-Destination: d" -H"ILP-Expiry: e" -H"ILP-Amount: 10" http://localhost:8081/asdf
 ```
